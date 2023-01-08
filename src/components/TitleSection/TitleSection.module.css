@@ -1,0 +1,21 @@
+.main{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5%;
+    grid-gap: 20px;
+}
+
+
+@media screen and (min-width: 1000px){
+    .main{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+        align-items: center;
+    }
+
+
+}
