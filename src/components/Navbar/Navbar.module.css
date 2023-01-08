@@ -1,0 +1,100 @@
+.container  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 5%;
+}
+
+.logo_div   {
+    margin: 0;
+    padding:0;
+    color: aliceblue;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 4px 14px;
+    border-radius: 50%;
+    background-color: blueviolet;
+}
+
+.links   {
+    display: none;
+}
+
+.navLink   {
+    margin: 0 10px;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(90, 88, 88);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.navLink:hover, .navLink:active, .navLink:focus   {
+    color: #000;
+}
+
+
+.socials{
+    display: none;
+}
+
+.social{
+    
+}
+
+.toggle{
+    display: block;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+
+}
+
+@media screen and (min-width: 1000px) {
+    .container  {
+        display: grid;
+        grid-template-columns: 5% 45% 50%;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 2% 8% 1%;
+    }
+
+    .links{
+        display: flex;
+    }
+    .socials{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .social{
+        margin: 0 0 0 20px;
+        color: rgb(90, 88, 88);
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .social:hover, .social:active, .social:focus{
+        color: #000;
+    }
+
+    .toggle{
+        display: none;
+    }
+
+}

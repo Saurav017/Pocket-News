@@ -1,11 +1,21 @@
-.container{
-    display: grid;
-    grid-template-columns: 1fr;
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     box-sizing: border-box;
     padding: 5%;
+}
+.sub_container{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     grid-gap: 20px;
 }
 
@@ -41,7 +51,11 @@
 
 
 @media screen and (min-width: 1000px){
-    .container{
+    .container  {
+        padding: 3% 8%;
+    }
+    
+    .sub_container{
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 10px;
         align-items: center;

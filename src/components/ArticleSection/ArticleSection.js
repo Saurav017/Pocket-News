@@ -1,5 +1,6 @@
 import React from 'react'
 import useFetch from '../../hooks/useFetch';
+import TitleHeader from '../TitleHeader/TitleHeader';
 import ArticleCard from './ArticleCard';
 import classes from './ArticleCard.module.css'
 const ArticleSection = () => {
@@ -16,8 +17,9 @@ const ArticleSection = () => {
     }
 
   return (
-    <>
     <div className={classes.container}>
+    <TitleHeader title="Latest News" />
+    <div className={classes.sub_container}>
         {data.map((data, index) => {
             if(index < 6)   {
                 return (
@@ -26,7 +28,7 @@ const ArticleSection = () => {
             }
         })}
     </div>
-    </>
+    </div>
   )
 }
 
