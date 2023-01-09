@@ -27,7 +27,6 @@ const Card = () => {
     return <p>Loading...</p>;
   }
 
-  console.log(data);
     if (error) {
         return <p>Something went Wrong</p>;
     }
@@ -36,7 +35,7 @@ const Card = () => {
 
             if(index === 0)    {
                 return (
-                    <div className={classes.main}>
+                    <div className={classes.main} key={index}>
                     <img src={data.urlToImage} alt={data.title} className={classes.card_image} />
                     <p className={classes.card_date}>{convertDate(data.publishedAt)}</p>
                     <h3 className={classes.card_title}><Link to={data.url}>{data.title}</Link></h3>

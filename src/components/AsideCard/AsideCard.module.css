@@ -50,6 +50,9 @@
     .line   {
         width: 100%;
     }
+    .main   {
+        padding: 0;
+    }
 
     .main:nth-child(1)  {
         padding-top: 0;

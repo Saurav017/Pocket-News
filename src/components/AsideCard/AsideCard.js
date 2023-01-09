@@ -25,7 +25,7 @@ const AsideCard = () => {
     return <p>Loading...</p>;
   }
 
-  console.log(data);
+ 
   if (error) {
     return <p>Something went Wrong</p>;
   }

@@ -32,7 +32,7 @@ const Navbar = () => {
                 key={asset.id}
                 className={classes.navLink}
                 onClick={navMenuCloseHandler}
-                activeClass={classes.navLink + " " + classes.open}
+                activeclass={classes.navLink + " " + classes.open}
               >
                 <Link to="/">
                   {asset.title}

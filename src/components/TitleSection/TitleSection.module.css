@@ -30,7 +30,14 @@
         grid-gap: 20px;
         align-items: center;
         justify-content: space-between;
+        
     }
 
-
+    .aside  {
+        display: grid;
+        grid-row:1/4;
+        grid-column: 2/3;
+        
+    }
+   
 }

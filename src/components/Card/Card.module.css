@@ -25,3 +25,12 @@
     font-size: 18px;
     font-weight: 600;
 }
+
+@media screen and (min-width:1000) {
+    .main{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row:1/4;
+        grid-column: 1/2;
+    }
+}
