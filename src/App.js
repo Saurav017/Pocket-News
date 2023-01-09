@@ -7,8 +7,9 @@ function App() {
   return (
    <>
     <Routes>
-      <Route path="/" exact element={<Home />} />
-      <Route path="/auth" element={<AuthPage />} />
+      <Route index element={<AuthPage />} />
+      <Route path="/home" exact element={<Home />} />
+      
     </Routes>
    </>
   );

@@ -7,8 +7,13 @@ import { FaGithub } from "react-icons/fa";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider,GithubAuthProvider } from "firebase/auth";
 import { auth,provider,ghprovider } from "../../firebase-config";
+import {useNavigate} from "react-router-dom";
+
 
 const Auth = () => {
+
+  const navigate = useNavigate();
+
   // toggling the password type
   const [passwordType, setPasswordType] = useState("password");
   const [errorMessage, setErrorMessage] = useState("");
@@ -49,7 +54,6 @@ const Auth = () => {
       return;
     }
     setErrorMessage("");
-    console.log(values);
 
 
     // firebase signup
@@ -63,7 +67,7 @@ const Auth = () => {
     const user = userCredential.user;
     setSubmitButtonDisabled(false);
     // ...
-    console.log("Login Successful")
+    navigate("/home");
   })
   .catch((error) => {
     setSubmitButtonDisabled(false);
@@ -82,12 +86,18 @@ const Auth = () => {
         await updateProfile(user, {
           displayName: values.email.charAt(0).toUpperCase(),
         });
-        console.log(user);
+        navigate("/home");
       })
       .catch((err) => {
         setSubmitButtonDisabled(false);
         setErrorMessage(err.message);
         console.log(err);
+      });
+
+
+      setValues({
+        email: "",
+        pass: "",
       });
   };
 
@@ -101,6 +111,8 @@ const Auth = () => {
     const token = credential.accessToken;
     // The signed-in user info.
     const user = result.user;
+
+    navigate("/home");
     // ...
   }).catch((error) => {
     // Handle Errors here.
@@ -129,6 +141,7 @@ const Auth = () => {
     // The signed-in user info.
     const user = result.user;
     // ...
+    navigate("/home");
   }).catch((error) => {
     // Handle Errors here.
     const errorCode = error.code;

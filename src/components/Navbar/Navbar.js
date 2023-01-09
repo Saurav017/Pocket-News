@@ -22,7 +22,7 @@ const Navbar = () => {
   return (
     <nav className={classes.container}>
       <div className={classes.logo_div}>
-        <span className={classes.logo}>S</span>
+        <span className={classes.logo}>D</span>
       </div>
       <div className={NavMenuClass}>
         
