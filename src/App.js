@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import TitleSection from './components/TitleSection/TitleSection';
+import AuthPage from './pages/AuthPage';
 import Home from './pages/Home';
 
 function App() {
@@ -8,6 +8,7 @@ function App() {
    <>
     <Routes>
       <Route path="/" exact element={<Home />} />
+      <Route path="/auth" element={<AuthPage />} />
     </Routes>
    </>
   );

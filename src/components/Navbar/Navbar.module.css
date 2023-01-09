@@ -3,6 +3,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 2% 5%;
+    z-index: 100;
 }
 
 .logo_div   {
@@ -23,17 +24,42 @@
 }
 
 .links   {
-    display: none;
+    max-height: 100vh;
+    height: 100vh;
+    position: fixed;
+        left: -100%;
+        top: 5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s ease-in-out;
+        padding-left: 0;
+        z-index: 3;
+        background-color: #E5E6ED;
+        
+        
 }
 
+.links.active{
+    left: 0;
+    display: block;
+}
+
+
 .navLink   {
-    margin: 0 10px;
-    padding: 0;
+    margin: 20px 10px;
+    padding: 0 auto;
     font-size: 16px;
     font-weight: 500;
     color: rgb(90, 88, 88);
     text-transform: uppercase;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .navLink:hover, .navLink:active, .navLink:focus   {
@@ -66,7 +92,7 @@
 @media screen and (min-width: 1000px) {
     .container  {
         display: grid;
-        grid-template-columns: 5% 45% 50%;
+        grid-template-columns: 5% 60% 35%;
         justify-content: flex-start;
         align-items: center;
         padding: 2% 8% 1%;
@@ -74,6 +100,17 @@
 
     .links{
         display: flex;
+        flex-direction: row;
+        position: initial;
+        height: 0;
+        top: 0
+    }
+
+    .navLink    {
+        margin: 0;
+        padding-right: 10px;
+        display: flex;
+        flex-direction: row;
     }
     .socials{
         display: flex;
